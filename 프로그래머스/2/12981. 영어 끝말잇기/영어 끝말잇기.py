@@ -7,8 +7,6 @@ def solution(n, words):
     
     m = 1
     turn = 1
-    print(m, turn, words[0])
-
     dup_words = [words[0]]
     
     # 탈락 조건: 중복 단어, 끝말잇기X 
@@ -18,12 +16,9 @@ def solution(n, words):
             turn += 1
         m += 1
         
-        if words[i] in dup_words:
+        if words[i] in dup_words or words[i-1][-1] != words[i][0]:
             return [m, turn]
         else: 
             dup_words.append(words[i])
-        
-        if words[i-1][-1] != words[i][0]:
-            return [m , turn]
-                
+            
     return [0,0]
