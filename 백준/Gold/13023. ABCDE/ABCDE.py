@@ -27,7 +27,6 @@ def solution(n, m):
     for i in range(n):
         if dfs(i, 0):
             return 1
-        
     return 0
     
     
