@@ -4,4 +4,4 @@ def solution(numbers):
     
     answer = ''.join(sorted_numbers)
     
-    return answer if answer[0] != '0' else '0'
+    return answer if int(answer) != 0 else '0'
